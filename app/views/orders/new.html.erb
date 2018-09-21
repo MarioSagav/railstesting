@@ -16,6 +16,13 @@
 	<br>
 	<%=f.label :distance %>
 	<%=f.text_field :distance %>
+  <br>
+  <h1>informacion de la evaluacion</h1>
+    <%= fields_for :evaluation, @order.evaluation do |eval|%>
+      description: <%=eval.text_field :description%>
+      <br>
+      note: <%= eval.number_field :note %>
+    <% end %>
 	<%= f.submit %>
 	<% end %>
 </body>

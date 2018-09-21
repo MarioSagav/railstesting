@@ -1,0 +1,19 @@
+
+%table.some{:border => 1}
+  - @contactos.each do |c|
+    %tr
+      %td
+        =c.brand
+      %td
+        =c.year
+      %td
+        =c.specs
+      %td
+        =c.avaible_days
+      %td
+        =c.cost_x_km
+      %td
+        %a{ href: -edit_truck_path(c)}
+          %p editar
+%a{ href: -edit_truck_path}
+  %p crear

@@ -6,7 +6,7 @@ class OrdersController < ApplicationController
 	def new
 		#asi se crea orders
 		@order = Order.new
-		
+
 	end
 
 	def edit
@@ -20,7 +20,11 @@ class OrdersController < ApplicationController
 		@order.customer_id = params[:order][:customer_id]
 		@order.truck_id = params[:order][:truck_id]
 		@order.date = params[:order][:date]
-		@order.distance = params[:order][:distance] 
+		@order.distance = params[:order][:distance]
+    @evaluation = @order.evaluation || @order.build_evaluation
+    @evaluation.description = params[:evaluation][:description]
+    @evaluation.note = params[:evaluation][:note]
+    @evaluation.customer_id = @order.customer_id
 		if @order.save
 			flash[:notice] = "orden creada"
 			redirect_to orders_path

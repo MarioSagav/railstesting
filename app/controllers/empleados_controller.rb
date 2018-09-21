@@ -38,7 +38,7 @@ class EmpleadosController < ApplicationController
 			flash[:notice] = "empleado actualizado" + @empleado.nombre
 			redirect_to empleados_path
 		else
-			render :new
+			render :edit
 		end
 	end
 end

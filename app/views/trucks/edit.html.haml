@@ -1,0 +1,17 @@
+=form_for @truck do |f|
+  =f.label :brand
+  =f.text_field :brand
+  %br
+  =f.label :year
+  =f.number_field :year
+  %br
+  =f.label :specs
+  =f.text_field :specs
+  %br
+  =f.label :avaible_days
+  =f.text_field :avaible_days
+  %br
+  =f.label :cost_x_km
+  =f.number_field :cost_x_km
+  %br
+  =f.submit
