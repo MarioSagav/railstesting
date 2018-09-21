@@ -20,7 +20,7 @@ class EmpleadosController < ApplicationController
 		@empleado.numeroDocumento = params[:empleado][:numeroDocumento]
 
 		if @empleado.save
-			flash[:notice] = "empleado creado"
+			flash[:notice] = "empleado creado " +@empleado.nombre
 			redirect_to empleados_path
 		else
 			render :new
@@ -35,7 +35,7 @@ class EmpleadosController < ApplicationController
 		@empleado.telefono = params[:empleado][:telefono]
 		@empleado.numeroDocumento = params[:empleado][:numeroDocumento]
 		if @empleado.save
-			flash[:notice] = "empleado creado"
+			flash[:notice] = "empleado actualizado" + @empleado.nombre
 			redirect_to empleados_path
 		else
 			render :new

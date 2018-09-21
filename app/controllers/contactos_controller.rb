@@ -20,6 +20,7 @@ class ContactosController < ApplicationController
 		@contacto.direccion = params[:contacto][:direccion]
 
 		if @contacto.save
+      flash[:notice] = "contacto creado "+ @contacto.nombre
 			redirect_to contactos_path
 		else
 			render :new
@@ -35,6 +36,7 @@ class ContactosController < ApplicationController
 		@contacto.direccion = params[:contacto][:direccion]
 
 		if @contacto.save
+      flash[:notice] = "contacto actualizado " + @contacto.nombre
 			redirect_to contactos_path
 		else
 			render :edit

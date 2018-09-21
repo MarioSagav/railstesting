@@ -2,12 +2,12 @@ class EmpresasController < ApplicationController
   def index
     @empresas = Empresa.all
   end
-  
+
   def new
     @empresa = Empresa.new
   end
 
-  def edit 
+  def edit
     @empresa = Empresa.find params[:id]
   end
 
@@ -21,8 +21,9 @@ class EmpresasController < ApplicationController
     @empresa.sitioWeb = params[:empresa][:sitioWeb]
 
     if @empresa.save
+      flash[:notice] = "empresa creada " + @empresa.razonSocial
       redirect_to empresas_path
-    else 
+    else
       render :new
     end
   end
@@ -37,8 +38,9 @@ class EmpresasController < ApplicationController
     @empresa.sitioWeb = params[:empresa][:sitioWeb]
 
     if @empresa.save
+      flash[:notice] = "empresa actualizada " + @empresa.razonSocial
       redirect_to empresas_path
-    else 
+    else
       render :edit
     end
   end

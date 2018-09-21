@@ -1,0 +1,19 @@
+= flash[:notice]
+%table.some{:border => 1}
+  - @contactos.each do |c|
+    %tr
+      %td
+        =c.nombre
+      %td
+        =c.apellido
+      %td
+        =c.telefono
+      %td
+        =c.correoElectronico
+      %td
+        =c.direccion
+      %td
+        %a{ href: -edit_contacto_path(c)}
+          %p editar
+%a{ href: -new_contacto_path}
+  %p crear

@@ -1,0 +1,19 @@
+= flash[:notice]
+%table.some{:border => 1}
+  - @empleados.each do |c|
+    %tr
+      %td
+        =c.nombre
+      %td
+        =c.apellido
+      %td
+        =c.genero
+      %td
+        =c.telefono
+      %td
+        =c.numeroDocumento
+      %td
+        %a{ href: -edit_empleado_path(c)}
+          %p editar
+%a{ href: -new_empleado_path}
+  %p crear empleado
