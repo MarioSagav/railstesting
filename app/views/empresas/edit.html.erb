@@ -1,0 +1,21 @@
+<%= form_for @empresa do |e|%>
+	<%= e.label :razonSocial %>
+  <%= e.text_field :razonSocial %>
+  <br>
+  <%= e.label :nit %>
+  <%= e.text_field :nit%>
+  <br>
+  <%= e.label :direccion %>
+  <%= e.text_field :direccion %>
+  <br>
+  <%= e.label :telefono %>
+  <%= e.number_field :telefono %>
+  <br>
+  <%= e.label :fax %>
+  <%= e.number_field :fax %>
+  <br>
+  <%= e.label :sitioWeb %>
+  <%= e.text_field :sitioWeb %>
+  <br>
+  <%= e.submit %>
+<% end %>

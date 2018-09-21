@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<%= form_for @order do |f| %>
+	<%=f.label :customer %>
+	<%=f.text_field :customer_id %>
+	<br>
+	<%=f.label :truck_id %>
+	<%=f.text_field :truck_id%>
+	<br>
+	<%=f.label :date %>
+	<%=f.text_field :date %>
+	<br>
+	<%=f.label :distance %>
+	<%=f.text_field :distance %>
+	<%= f.submit %>
+	<% end %>
+</body>
+</html>

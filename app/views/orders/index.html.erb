@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<%= flash[:notice] %>
+<table border = 1>
+<% @orders.each do |order| %>
+	<tr>
+		<td><%= order.customer_id %></td>
+		<td><%= order.truck_id %></td>
+		<td><%= order.date %></td>
+		<td><%= order.distance %></td>
+		<td><a href= <%=edit_order_path(order) %>>editar</a></td>
+	</tr>
+<% end %> 
+</table>
+</body>
+</html>

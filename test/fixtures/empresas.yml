@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  razonSocial: MyString
+  nit: MyString
+  direccion: MyString
+  telefono: 1
+  fax: 1
+  sitioWeb: MyString
+
+two:
+  razonSocial: MyString
+  nit: MyString
+  direccion: MyString
+  telefono: 1
+  fax: 1
+  sitioWeb: MyString

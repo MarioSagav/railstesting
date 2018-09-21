@@ -1,0 +1,12 @@
+<table border = 1>
+<% @empleados.each do |empleados| %>
+	<tr>
+		<td><%= empleados.nombre %></td>
+		<td><%= empleados.apellido %></td>
+		<td><%= empleados.genero %></td>
+		<td><%= empleados.telefono %></td>
+		<td><%= empleados.numeroDocumento %></td>
+		<td><a href= <%=edit_empleado_path(empleados) %>>editar</a></td>
+	</tr>
+<% end %>
+</table>

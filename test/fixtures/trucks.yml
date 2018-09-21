@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  brand: MyString
+  year: 1
+  specs: MyString
+  avaible_days: MyString
+  costxkm: 9.99
+
+two:
+  brand: MyString
+  year: 1
+  specs: MyString
+  avaible_days: MyString
+  costxkm: 9.99
